@@ -38,12 +38,12 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    
-<link rel="stylesheet" href="/assets/fonts.css">
-
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/assets/fonts.css">
     
     
     
+    
+        <link rel="preconnect" href="https://evan.beee.top" crossorigin>
     
     <script id="hexo-configurations">
     let REDEFINE = window.REDEFINE || {};
@@ -52,18 +52,10 @@
     REDEFINE.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
     
-    
-<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/brands.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/solid.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/regular.min.css">
-
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/fontawesome/regular.min.css">
     
     
     
@@ -320,6 +312,63 @@
 
 
             
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;评论
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: '97b61ec0803c6dea1e0d',
+                    clientSecret: 'c33067a9cc345c6f90c84a4f907acfd3ad5fa788',
+                    repo: 'gh-pages-comments',
+                    owner: 'timetrapzz',
+                    admin: ['timetrapzz'],
+                    id: __gitalk__pathname,
+                    language: 'zh-CN'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
         </div>
 
         
@@ -411,6 +460,10 @@
 
         <!-- go comment -->
         
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
     </ul>
 </div>
 
@@ -501,69 +554,37 @@
 
 
 
+<script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/utils.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/main.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/layouts/menu-shrink.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/tools/go-top-bottom.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/tools/dark-light-toggle.js"></script>
 
-<script src="/js/utils.js"></script>
 
-<script src="/js/main.js"></script>
-
-<script src="/js/layouts/menu-shrink.js"></script>
-
-<script src="/js/tools/go-top-bottom.js"></script>
-
-<script src="/js/tools/dark-light-toggle.js"></script>
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/tools/local-search.js"></script>
 
 
 
-    
-<script src="/js/tools/local-search.js"></script>
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/tools/code-block.js"></script>
 
 
 
-
-    
-<script src="/js/tools/code-block.js"></script>
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/layouts/lazyload.js"></script>
 
 
 
-
-    
-<script src="/js/layouts/lazyload.js"></script>
-
-
-
-
-    
-<script src="/js/tools/runtime.js"></script>
-
-    
-<script src="/js/layouts/odometer.min.js"></script>
-
-    
-<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
-
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/tools/runtime.js"></script>
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/layouts/odometer.min.js"></script>
+    <link rel="stylesheet" href="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/assets/odometer-theme-minimal.css">
 
 
 
 
 <div class="post-scripts pjax">
     
-        
-<script src="/js/tools/toc-toggle.js"></script>
-
-<script src="/js/libs/anime.min.js"></script>
-
-<script src="/js/layouts/toc.js"></script>
-
-<script src="/js/plugins/tabs.js"></script>
-
+        <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/tools/toc-toggle.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/libs/anime.min.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/layouts/toc.js"></script><script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/plugins/tabs.js"></script>
     
     
 </div>
 
 
-    
-<script src="/js/libs/pjax.min.js"></script>
-
+    <script src="//evan.beee.top/projects/hexo-theme-redefine/v1.1.6/source/js/libs/pjax.min.js"></script>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
         window.pjax = new Pjax({
